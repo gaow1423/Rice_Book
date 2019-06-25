@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Validate profile functionality" errors="0" tests="4" failures="0" time="0.457" timestamp="2019-04-04T21:50:42">
+  <testcase classname="Validate profile functionality" name="Reset the database with initiate dataset" time="0.233"></testcase>
+  <testcase classname="Validate profile functionality" name="should login with correct username and password" time="0.058"></testcase>
+  <testcase classname="Validate profile functionality" name="should get the headline of loggedin User" time="0.055"></testcase>
+  <testcase classname="Validate profile functionality" name="should be able to update the headline of logged in user" time="0.111"></testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,119 @@
+<section id="Registeration">
+  <h2>
+    Create a New Account
+  </h2>
+  <ul class="regis_form">
+    <li class="regis_form_item">
+      <label>
+        <input
+          class="username"
+          id="username"
+          [(ngModel)]="regis_profile.username"
+          placeholder="username"
+        />
+      </label>
+    </li>
+    <li class="regis_form_item">
+      <label>
+        <input
+          class="display_name"
+          id="display_name"
+          [(ngModel)]="regis_profile.display_name"
+          placeholder="display name"
+        />
+      </label>
+    </li>
+    <li class="regis_form_item">
+      <label>
+        <input
+          class="email"
+          id="email"
+          [(ngModel)]="regis_profile.email_address"
+          placeholder="email address"
+        />
+      </label>
+    </li>
+    <li class="regis_form_item">
+      <label>
+        <input
+          class="password"
+          id="password"
+          type="password"
+          [(ngModel)]="regis_profile.password"
+          placeholder="password"
+        />
+      </label>
+    </li>
+
+    <li class="regis_form_item">
+      <label>
+        <input
+          class="phone"
+          id="phone"
+          [(ngModel)]="regis_profile.phone_number"
+          placeholder="phone number"
+        />
+      </label>
+    </li>
+    <li class="regis_form_item">
+      <label>
+        <input
+          class="birth"
+          id="birth"
+          type="date"
+          [(ngModel)]="regis_profile.DOB"
+          placeholder="date of birth"
+        />
+      </label>
+    </li>
+    <li class="regis_form_item">
+      <label>
+        <input
+          class="zipcode"
+          id="zipcode"
+          [(ngModel)]="regis_profile.zipcode"
+          placeholder="zip code"
+        />
+      </label>
+    </li>
+  </ul>
+
+  <button
+    id="sign_on"
+    class="sign_on"
+    (click)="validation_regis(regis_profile, error)"
+  >
+    Sign Up
+  </button>
+
+  <section
+    id="reset"
+    display="inline-block"
+    style="color: white; position: absolute"
+    (click)="resetAll()"
+  >
+    reset
+  </section>
+
+  <section class="error_area">
+    <section id="regis_result" *ngIf="error.username" style="color: red">
+      {{ error.username }}
+    </section>
+    <section *ngIf="error.display_name" style="color: red">
+      {{ error.display_name }}
+    </section>
+    <section *ngIf="error.email_address" style="color: red">
+      {{ error.email_address }}
+    </section>
+    <section *ngIf="error.password" style="color: red">
+      {{ error.password }}
+    </section>
+    <section *ngIf="error.phone_number" style="color: red">
+      {{ error.phone_number }}
+    </section>
+    <section *ngIf="error.DOB" style="color: red">{{ error.DOB }}</section>
+    <section *ngIf="error.zipcode" style="color: red">
+      {{ error.zipcode }}
+    </section>
+  </section>
+</section>

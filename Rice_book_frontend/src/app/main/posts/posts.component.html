@@ -1,0 +1,129 @@
+<div class="post_div">
+  <header>Posts</header>
+
+  <div class="addPost">
+    <div class="addImage">
+      <form accept="/image/*" enctype="multipart/form-date">
+        <img src={{postImage}} width="350px" height="200px" border="1" /><img />
+        <div class="fileSelect"><input type="file" name="image" (change)="handleImageChange($event)" /></div>
+      </form>
+    </div>
+    <div class="textbox">
+      <input id="post_text" class="post_text_box" [(ngModel)]="postContent" placeholder="Post here!" />
+      <button id="post_btn" class="post_btn" (click)="postArticle(postContent, postImage)">
+        Post
+      </button>
+      <button class="post_clear" (click)="Cancel(postContent)">Cancel</button>
+    </div>
+
+  </div>
+
+  <div class="logo">
+    R
+  </div>
+
+  <div class="post_search">
+    <input id="searchBar" [(ngModel)]="searchTarget" placeholder="Search Here!"
+      (ngModelChange)="updateSearchWord(search_field.value)" #search_field />
+  </div>
+
+  <div class="feeds">
+    <header style="display: fixed">feeds</header>
+    <div *ngFor="let post of posts">
+      <div class="post_item" *ngIf="
+          post.text.includes(searchTarget) || post.author.includes(searchTarget)
+        ">
+        <div class="post_auther">
+          <b>Author <span id="post_author">{{ post.author }}</span> ({{
+              post.date
+            }}):</b>
+        </div>
+
+
+        <img class="post_image" *ngIf="post.image != ''" src={{post.image}} width="350px" height="200px"
+          border-radius="8px" />
+
+        <div>
+          <p id="feeds" class="post_text">{{ post.text }}</p>
+        </div>
+
+
+        <div></div>
+        <button class="comment_btn" (click)="comment_add.style = 'display: block'">Comment</button>
+        <button class="edit_btn" (click)="article.style = 'display:block'">
+          Edit
+        </button>
+
+        <button class="show_btn" (click)="
+            comment.style = 'display:block';
+            hide.style = 'display:inline-block';
+            show.style = 'display: none'
+          " style="display: inline-block" #show>
+          Show Comments
+        </button>
+
+        <button class="show_btn" (click)="
+            comment.style = 'display:none';
+            show.style = 'display:inline-block';
+            hide.style = 'display: none'
+          " style="display:none" #hide>
+          Hide Comments
+        </button>
+
+
+        <div #comment_add class="comment_add">
+          <input type="text" [(ngModel)]="addComment" placeholder="new comment" style="width: 160px; height: 30px" />
+          <button class="comment_edit"
+            (click)="comment_add.style = 'display: none'; changeComment(addComment, -1, post._id)">
+            Update
+          </button>
+          <button class="comment_edit" (click)="comment_add.style = 'display: none'">
+            Cancel editing
+          </button>
+        </div>
+
+
+        <div class="article_editing" style="display: none" #article>
+          <input type="text" [(ngModel)]="newArticle" placeholder="new post" display="inline-block"
+            style="width: 160px; height: 60px" />
+          <button class="updatePost" (click)="
+              article.style = 'display: none'; changePost(newArticle, post._id)
+            ">
+            Update
+          </button>
+
+          <button class="updatePost" (click)="article.style = 'display: none'">
+            Cancel editing
+          </button>
+        </div>
+
+        <div></div>
+
+        <div class="comments_list" #comment>
+          <div *ngFor="let c of post.comments" style="height: 30px">
+
+            <div>{{comment_error}}</div>
+            <div #comment_edit style="display: none; margin-left : 20px">
+              <input type="text" [(ngModel)]="newComment" placeholder="new comment"
+                style="width: 160px; height: 30px" />
+              <button class="comment_edit"
+                (click)="comment_edit.style = 'display: none'; changeComment(newComment, c._id, post._id)">
+                Update
+              </button>
+              <button class="comment_edit" (click)="comment_edit.style = 'display: none'">
+                Cancel editing
+              </button>
+            </div>
+
+            <div style="height: 25px">
+              {{ c.author }}: {{ c.text }}
+              <button class="comment_edit" (click)="comment_edit.style = 'display: inline-block'">
+                Edit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

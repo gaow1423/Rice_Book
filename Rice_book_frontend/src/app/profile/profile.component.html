@@ -1,0 +1,134 @@
+<header class="main-header">
+  <a class="main-header__brand">
+    RiceBook
+  </a>
+  <ul class="links">
+    <li class="mainLink">
+      <a routerLink="/main">Main Page</a>
+    </li>
+  </ul>
+</header>
+
+<div class="profile_div">
+  <div class="profile_pic">
+    <header>Picture</header>
+    <form accept="image/*" enctype="multipart/form-date">
+      <div class="fileSelect"><img src={{profile.avatar}} width="200px" height="150px" /><img /></div>
+      <div class="fileSelect"><input type="file" name="image" (change)="handleImageChange($event)" /></div>
+    </form>
+
+  </div>
+
+  <div class="logo">
+    R
+  </div>
+
+  <div class="Information">
+    <div class="current_Info">
+      <header>Current Information</header>
+      <ul class="curlist">
+        <li class="cur_item">
+          <p>Username:</p>
+          {{ profile.username }}
+        </li>
+        <li class="cur_item">
+          <p>Email Address:</p>
+          {{ profile.email_address }}
+        </li>
+        <li class="cur_item">
+          <p>Phone Number:</p>
+          {{ profile.phone_number }}
+        </li>
+        <li class="cur_item">
+          <p>Date of Birth:</p>
+          {{ profile.DOB }}
+        </li>
+        <li class="cur_item">
+          <p>Zipcode:</p>
+          {{ profile.zipcode }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="Update_Info">
+      <header>Update Information</header>
+      <ul class="update_items">
+        <li class="update_item">
+          <label>Username:
+            <input [(ngModel)]="Input_profile.username" placeholder="" />
+          </label>
+        </li>
+        <li class="update_item">
+          <label>Password:
+            <input [(ngModel)]="Input_profile.password" placeholder="" />
+          </label>
+        </li>
+        <li class="update_item">
+          <label>Email Address:
+            <input [(ngModel)]="Input_profile.email_address" placeholder="" />
+          </label>
+        </li>
+        <li class="update_item">
+          <label>Phone Number:
+            <input [(ngModel)]="Input_profile.phone_number" placeholder="" />
+          </label>
+        </li>
+        <li class="update_item">
+          <label>Zipcode:
+            <input [(ngModel)]="Input_profile.zipcode" placeholder="" />
+          </label>
+        </li>
+      </ul>
+
+      <section>
+        <section *ngIf="error.username" style="color: red">
+          {{ error.username }}
+        </section>
+        <section *ngIf="error.password" style="color: red">
+          {{ error.password }}
+        </section>
+        <section *ngIf="error.display_name" style="color: red">
+          {{ error.display_name }}
+        </section>
+        <section *ngIf="error.email_address" style="color: red">
+          {{ error.email_address }}
+        </section>
+        <section *ngIf="error.phone_number" style="color: red">
+          {{ error.phone_number }}
+        </section>
+        <section *ngIf="error.DOB" style="color: red">
+          {{ error.DOB }}
+        </section>
+        <section *ngIf="error.zipcode" style="color: red">
+          {{ error.zipcode }}
+        </section>
+      </section>
+
+      <button class="updatebtn" (click)="validation()">
+        Upload Info
+      </button>
+
+
+
+      <div *ngIf="checkType()">
+        <label>Username:
+          <input [(ngModel)]="linkUsername" placeholder="" />
+        </label>
+        <label>Password:
+          <input [(ngModel)]="linkPassword" type="password" placeholder="" />
+        </label>
+        <div>{{fblinkerror}}</div>
+      </div>
+
+      <button class="updatebtn" (click)="linkfb()">
+        Link account
+      </button>
+
+      <button class="updatebtn" (click)="unlinkfb()">
+        UnLink account
+      </button>
+      <div style="color: red; text-align: center">{{this.linkError}}</div>
+
+    </div>
+  </div>
+</div>

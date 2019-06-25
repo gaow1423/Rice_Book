@@ -1,0 +1,53 @@
+<nav class="Login">
+  <ul class="main-nav__items">
+    <li class="main-nav__item">
+      <label
+        >Username:
+        <input
+          id="login_username"
+          [(ngModel)]="login_profile.username"
+          placeholder=""
+        />
+      </label>
+      <div></div>
+      <span
+        style="margin-bottom: 20px; width: 220px; height: 40px; display: inline-block"
+        ><p
+          *ngIf="error_login.username"
+          style="color: red; margin-bottom: 30px"
+        >
+          {{ error_login.username }}
+        </p>
+      </span>
+    </li>
+
+    <li class="main-nav__item">
+      <label
+        >Password:
+        <input
+          id="login_password"
+          type="password"
+          [(ngModel)]="login_profile.password"
+          placeholder=""
+        />
+      </label>
+      <div></div>
+      <span
+        style="margin-bottom: 20px; width: 220px; height: 40px; display: inline-block"
+      >
+        <p *ngIf="error_login.password" style="color: red; margin-bottom: 30px">
+          {{ error_login.password }}
+        </p>
+      </span>
+    </li>
+
+    <li class="main-nav__item">
+      <a id="loginbtn" (click)="validation_login(login_profile)">Login</a>
+    </li>
+    
+  </ul>
+ 
+</nav>
+<div class="fblogin">
+  <a id="fblogin" (click) = "FBlogin()">Facebook Login</a>
+</div>

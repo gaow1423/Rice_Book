@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+}
+
+.main-header__brand {
+  display: inline-block;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.main-header {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #4267b2;
+  padding: 19px 16px;
+  z-index: 1;
+}
+header {
+  border: 1px solid #f5f6f7;
+  border-radius: 8px;
+  background-color: #f5f6f7;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.links {
+  display: inline-block;
+  height: 50px;
+  margin: 0px;
+  list-style: none;
+  float: right;
+}
+
+.mainLink {
+  display: inline-block;
+  top: 0px;
+  margin: 0px 100px;
+}
+
+.mainLink > a {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  margin-right: 0px;
+  line-height: 50px;
+}
+
+.main_div {
+  position: relative;
+  margin-top: 100px;
+}
+
+.main_status {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  right: 70%;
+
+  padding-bottom: 5px;
+  height: 550px;
+}
+
+.main_status img {
+  display: block;
+  margin: 35px auto;
+}
+.name {
+  margin-top: 42px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  /* border: 1px solid rgb(168, 167, 167); */
+}
+.status {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.status_text {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  height: 50px;
+}
+
+.following {
+  display: inline-block;
+  position: absolute;
+  left: 30px;
+  right: 70%;
+  margin-top: 580px;
+  overflow: scroll;
+  height: 880px;
+}
+
+.posts {
+  display: inline-block;
+  /* width: 500px;
+  height: 500px; */
+  position: absolute;
+  left: calc(30% + 10px);
+  right: 30px;
+}
+.udbtn {
+  display: block;
+  margin: 8px auto;
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif !important;
+  background: linear-gradient(#67ae55, #578843);
+  background-color: #69a74e;
+  box-shadow: inset 0 1px 1px #a4e388;
+  border-color: #3b6e22 #3b6e22 #2c5115;
+  font-size: 15px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}

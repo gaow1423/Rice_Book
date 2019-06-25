@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Validate article functionality" errors="0" tests="6" failures="0" time="0.825" timestamp="2019-04-04T21:50:41">
+  <testcase classname="Validate article functionality" name="Reset the database with initiate dataset" time="0.27"></testcase>
+  <testcase classname="Validate article functionality" name="should login with correct username and password" time="0.064"></testcase>
+  <testcase classname="Validate article functionality" name="should return at least 5 articles if test user is logged in user" time="0.124"></testcase>
+  <testcase classname="Validate article functionality" name="should get the post with invalid id" time="0.072"></testcase>
+  <testcase classname="Validate article functionality" name="should get the post with valid id" time="0.064"></testcase>
+  <testcase classname="Validate article functionality" name="should add a article for logged in user" time="0.228"></testcase>
+</testsuite>
+<testsuite name="Validate auth functionality" errors="0" tests="8" failures="0" time="0.57" timestamp="2019-04-04T21:50:42">
+  <testcase classname="Validate auth functionality" name="Reset the database with initiate dataset" time="0.241"></testcase>
+  <testcase classname="Validate auth functionality" name="should register a new user." time="0.059"></testcase>
+  <testcase classname="Validate auth functionality" name="should not register the user already exist" time="0.067"></testcase>
+  <testcase classname="Validate auth functionality" name="should not login a user with wrong password" time="0.063"></testcase>
+  <testcase classname="Validate auth functionality" name="should not login a user with wrong username, or the user does not exist" time="0.055"></testcase>
+  <testcase classname="Validate auth functionality" name="should login with correct username and password" time="0.056"></testcase>
+  <testcase classname="Validate auth functionality" name="should logout a user if he was logged in." time="0.014"></testcase>
+  <testcase classname="Validate auth functionality" name="should not logout a user if he was not logged in." time="0.012"></testcase>
+</testsuite>
+<testsuite name="Validate profile functionality" errors="0" tests="4" failures="0" time="0.457" timestamp="2019-04-04T21:50:42">
+  <testcase classname="Validate profile functionality" name="Reset the database with initiate dataset" time="0.233"></testcase>
+  <testcase classname="Validate profile functionality" name="should login with correct username and password" time="0.058"></testcase>
+  <testcase classname="Validate profile functionality" name="should get the headline of loggedin User" time="0.055"></testcase>
+  <testcase classname="Validate profile functionality" name="should be able to update the headline of logged in user" time="0.111"></testcase>
+</testsuite>
+</testsuites>

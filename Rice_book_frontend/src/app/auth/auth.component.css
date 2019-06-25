@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+}
+
+.main-header__brand {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.main-header {
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #4267b2;
+  padding: 19px 16px;
+  z-index: 1;
+}
+
+app-login {
+  display: inline-block;
+  text-align: right;
+  width: calc(100% - 74px);
+  vertical-align: middle;
+}

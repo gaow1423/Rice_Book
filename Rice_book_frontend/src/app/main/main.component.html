@@ -1,0 +1,52 @@
+<header class="main-header">
+  <a class="main-header__brand">
+    RiceBook
+  </a>
+  <ul class="links">
+    <li class="mainLink">
+      <a routerLink="/profile">Profile</a>
+    </li>
+    <li class="mainLink">
+      <a id="logoutbtn" (click)="clearStorage()">Log Out</a>
+    </li>
+  </ul>
+</header>
+
+<div class="main_div">
+  <div
+    class="main_status"
+    style="border: 1px solid #e3e5e7; border-radius: 8px"
+  >
+    <header>Status</header>
+
+    <div style="width: 300px; height: 300px; margin: 0px auto">
+      <img
+        src={{userAvatar}}
+        width = 200px;
+        height = 200px;
+        border-radius = 50%
+      />
+      <div class="name">{{ user.name }}</div>
+      <div class="status">
+        STATUS: <span id="user_status">{{ user.status }}</span>
+      </div>
+      <!-- <label> -->
+      <input
+        id="status_text"
+        class="status_text"
+        [(ngModel)]="newStatus"
+        placeholder="new status"
+      />
+      <!-- </label> -->
+      <button id="udbtn" class="udbtn" (click)="update_status()">Update</button>
+    </div>
+  </div>
+
+  <div class="following" style="border: 1px solid #e3e5e7; border-radius: 8px">
+    <app-following></app-following>
+  </div>
+
+  <div class="posts" style="border: 1px solid #e3e5e7; border-radius: 8px">
+    <app-posts></app-posts>
+  </div>
+</div>

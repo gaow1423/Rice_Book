@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Validate auth functionality" errors="0" tests="8" failures="0" time="0.57" timestamp="2019-04-04T21:50:42">
+  <testcase classname="Validate auth functionality" name="Reset the database with initiate dataset" time="0.241"></testcase>
+  <testcase classname="Validate auth functionality" name="should register a new user." time="0.059"></testcase>
+  <testcase classname="Validate auth functionality" name="should not register the user already exist" time="0.067"></testcase>
+  <testcase classname="Validate auth functionality" name="should not login a user with wrong password" time="0.063"></testcase>
+  <testcase classname="Validate auth functionality" name="should not login a user with wrong username, or the user does not exist" time="0.055"></testcase>
+  <testcase classname="Validate auth functionality" name="should login with correct username and password" time="0.056"></testcase>
+  <testcase classname="Validate auth functionality" name="should logout a user if he was logged in." time="0.014"></testcase>
+  <testcase classname="Validate auth functionality" name="should not logout a user if he was not logged in." time="0.012"></testcase>
+</testsuite>
+</testsuites>

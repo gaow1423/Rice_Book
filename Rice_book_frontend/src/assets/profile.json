@@ -1,0 +1,68 @@
+[
+  {
+    "username": "wg15",
+    "password": "12345",
+    "display_name": "John",
+    "email_address": "John3232@gmail.com",
+    "phone_number": "343-454-3432",
+    "DOB": "09-02-1990",
+    "zipcode": "34758",
+    "avatar": "https://s2.ax1x.com/2019/02/28/k7eRVs.png",
+    "status": "Hello!!!"
+  },
+  {
+    "username": "fe45",
+    "password": "54321",
+    "display_name": "Tom",
+    "email_address": "Tom1232@gmail.com",
+    "phone_number": "343-414-9932",
+    "DOB": "09-12-1990",
+    "zipcode": "31758",
+    "avatar": "https://s2.ax1x.com/2019/02/28/k7eRVs.png",
+    "status": "Hello!!!"
+  },
+  {
+    "username": "gt56",
+    "password": "jfiks",
+    "display_name": "Sam",
+    "email_address": "Sam9932@gmail.com",
+    "phone_number": "555-454-3432",
+    "DOB": "10-02-1991",
+    "zipcode": "11758",
+    "avatar": "https://s2.ax1x.com/2019/02/28/k7eRVs.png",
+    "status": "Hello!!!"
+  },
+  {
+    "username": "nm56",
+    "password": "jfixc",
+    "display_name": "IU",
+    "email_address": "IU3232@gmail.com",
+    "phone_number": "300-114-9932",
+    "DOB": "09-22-1999",
+    "zipcode": "3400",
+    "avatar": "https://s2.ax1x.com/2019/02/28/k7eRVs.png",
+    "status": "Hello!!!"
+  },
+  {
+    "username": "ga36",
+    "password": "jfiks",
+    "display_name": "King",
+    "email_address": "King0032@gmail.com",
+    "phone_number": "111-222-3432",
+    "DOB": "11-23-1989",
+    "zipcode": "00358",
+    "avatar": "https://s2.ax1x.com/2019/02/28/k7eRVs.png",
+    "status": "Hello!!!"
+  },
+  {
+    "username": "pl23",
+    "password": "jweks",
+    "display_name": "Wayne",
+    "email_address": "Wayne0012@gmail.com",
+    "phone_number": "343-488-9992",
+    "DOB": "08-05-1995",
+    "zipcode": "77054",
+    "avatar": "https://s2.ax1x.com/2019/02/28/k7eRVs.png",
+    "status": "Hello!!!"
+  }
+]

@@ -1,0 +1,32 @@
+<div class="followers_div">
+  <header>Followers</header>
+  <div class="follow" *ngFor="let follow of followers">
+    <img class="follow_avatar" src="{{ follow.avatar }}" />
+
+    <div class="follow_name">
+      {{ follow.username }}
+    </div>
+
+    <div class="follow_status">
+      {{ follow.status }}
+    </div>
+
+    <button class="follow_btn" (click)="unfollow(follow)">Unfollow</button>
+  </div>
+
+  <div>
+    <input
+      class="follow_text"
+      [(ngModel)]="newName"
+      placeholder="new user name"
+    />
+
+    <button class="follow_bnt" (click)="addNewFollower(newName)">Update</button>
+    <div
+      class="err_msg"
+      style="text-align: center; margin:0px auto; color: red"
+    >
+      {{ msg }}
+    </div>
+  </div>
+</div>

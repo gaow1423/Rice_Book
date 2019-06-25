@@ -1,0 +1,7 @@
+{
+   "netid": "wg15",
+   "frontend": "http://married-amount.surge.sh",
+   "backend": "https://ricebookgw1423.herokuapp.com",
+   "testUsername": "test1",
+   "testPassword": "password1"
+}
